@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Javascript statements</h2>
+    <p>A <b>Javascript program</b> is a list of <b>statements </b>
+    to be executed by a computer.</p>
+    <p id="demo"></p>
+    <script>
+        var x,y,z; //Statement 1
+        x=5;       //Statement 2
+        y=6;       //Statement 3
+        z=x+y;     //Statement 4
+        document.getElementById("demo").innerHTML="The value of z is " +z+ ".";
+    </script>
+    <p id="demo"></p>
+    <script>
+        var pi=3.14;
+        var person= "John Doe";
+        var answer= "Yes I am";
+        document.getElementById("demo").innerHTML=pi + "<br>" + person + "<br>" + answer;
+    </script>
+    <p id="a1"></p>
+    <script>
+        var carName="Volvo";
+        document.getElementById("a1").innerHTML= carName;
+    </script>
+    <h2>JS booleans</h2>
+    <p>Booleans can have 2 values: true or false:</p>
+    <p id="a2"></p>
+    <script>
+        var a,b,c ;
+        a=5, b=5, c=6 ;
+        document.getElementById("a2").innerHTML= (a==b) + "<br>" + (a==c)
+    </script>
+    <h2>JS arrays</h2>
+    <p id="c2"></p>
+    <script>
+        var cars= [ "saab", "volvo","bmw"];
+        document.getElementById("c2").innerHTML= cars[0] + "<br>" + cars;
+    </script>
+    <h2>JS objects</h2>
+    <p>Js objects are writen with curly braces. Object 
+        properties are written as name:value pairs, separated by commas.</p>
+    <p id="c4"></p>
+    <script>
+        a={Name:"John",sName:"Johnson",age:18};
+        document.getElementById("c4").innerHTML= a;
+    </script>
+    
+    <p>Input your age and click the button:</p>
+    <button onclick="d1()">Try it</button>
+    <input id="age" value="18">
+    <p id="d2"></p>
+    <script>
+        function d1() {
+            var age,voteable;
+            age= document.getElementById("age").value;
+            voteable= (age<18) ? "Too  young":"Old enough";
+            document.getElementById("d2").innerHTML = voteable + " to vote.";
+        }
+    </script>
+
+    <p>Display "good day" uf the hour is less that 18:00<:/p>
+        <p id="d3"> Good evening</p>
+        <script>
+            if (new Date().getHours() < 18) {
+                document.getElementById("d3"),innerHTML= "Good day";
+            }
+        </script>
+
+    <p id="f4"></p>
+    <p>Click the button to display a time-based greeting:</p>
+    <button onclick="f1()">Try it</button>
+    <script>
+        function f1() {
+            var hour=new Date().getHours();
+            var greeting;
+            if (hour<18) {
+                greeting = "good day";
+            }
+            else {
+                greeting = "good evening";
+            }
+            document.getElementById("f4").innerHTML= greeting;}
+    </script>
+
+
+    
+</body>
+</html>
